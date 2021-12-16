@@ -1,0 +1,2 @@
+@echo on
+git for-each-ref --format="%%(align:20,right)%%(color:green)%%(committerdate:relative)%%(color:reset)%%(end) %%(align:25,left)%%(color:blue)<%%(authorname)>%%(color:reset)%%(end) %%(color:yellow)%%(refname)%%(color:reset)" refs/remotes
