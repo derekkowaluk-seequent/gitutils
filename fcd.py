@@ -13,6 +13,7 @@ def print_usage():
 
 
 def find_forward(taglist, dirpath = '.'):
+	#print("Searching:{}".format(dirpath))
 	if not len(taglist):
 		return (True, dirpath)
 
@@ -34,7 +35,7 @@ def find_forward(taglist, dirpath = '.'):
 			except OSError:
 				is_dir = False
 			if is_dir:
-				basename = os.path.basename(entry.name)
+				basename = os.path.basename(entry.name).lower()
 				if basename[0] == '.': continue
 				if basename in taglist:
 					nextlist = taglist.copy()
@@ -42,8 +43,10 @@ def find_forward(taglist, dirpath = '.'):
 					result = find_forward(nextlist, os.path.abspath(entry.path))
 				else:
 					result = find_forward(taglist, os.path.abspath(entry.path))
+				#print("Result:{}".format(result))
 				if (result[0] == True):
 					return result
+	return result
 
 
 
@@ -54,9 +57,9 @@ def main():
 		print_usage()
 		sys.exit()
 
-	result = find_forward(sys.argv[1:])
+	result = find_forward([s.lower() for s in sys.argv[1:]])
 	if result[0]:
-		print(result)
+		print('"{}"'.format(result[1]))
 	else:
 		print("Not Found")
 
