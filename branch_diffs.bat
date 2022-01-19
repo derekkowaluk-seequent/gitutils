@@ -1,10 +1,20 @@
 @echo off
-call setup_colors.bat
 
-set _open_all=%1
 
-if not defined _open_all (
+set _open_command=%~1
+
+if not defined _open_command (
 	goto show_all
+)
+
+if "%~1" equ "v" (
+	echo open visual studio
+	set "_open_command=devenv /Edit"
+)
+
+if "%~1" equ "s" (
+	echo open Sublime Text
+	set "_open_command=subl"
 )
 
 
@@ -15,7 +25,7 @@ pushd %rootdir%
 echo %rootdir%
 
 chgcolor %_CLR_INFO%
-for /f "delims==" %%a in ('git diff --name-only origin/main...HEAD') do devenv /Edit %%a
+for /f "delims==" %%a in ('git diff --name-only origin/main...HEAD') do %_open_command% %%a
 
 
 chgcolor %_CLR_ORIG%
