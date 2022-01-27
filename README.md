@@ -21,7 +21,7 @@
     opath pull3d
     
     
-## bdiffs <e> <v>
+## bdiffs <option>
 
 ##### lists the changed files in your files (from main)
 
@@ -33,3 +33,11 @@
     bdiffs v      // opens files in Visual Studio
     
     bdiffs s      // opens files in sublime
+    
+    
+## fcd <path fragments>...
+
+##### searchs forward into directories for matching fragments and changes working directory to first match
+
+#### Examples
+![image](https://user-images.githubusercontent.com/90342284/151314414-b40d4643-1f74-446c-8695-8a0fb6b0bc13.png)
