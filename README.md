@@ -35,7 +35,7 @@
     bdiffs s      // opens files in sublime
     
     
-## fcd <path fragments>...
+## fcd 
 
 ##### searchs forward into directories for matching fragments and changes working directory to first match
 
