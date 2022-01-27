@@ -11,9 +11,9 @@
 
 #### The Tools:
 
-## opath <scriptname>
-
-##### opens items in the path in your editor
+## opath \<scriptname\>
+### Open in Path
+#####  &nbsp; &nbsp; opens items in the system path in your editor
 
 #### Examples
     opath opath      // you don't need to specify ".bat"
@@ -21,9 +21,9 @@
     opath pull3d
     
     
-## bdiffs <option>
-
-##### branch_diffs: lists the changed files in your branch compared to main
+## bdiffs \<option\>
+### Branch Diffs
+#####   &nbsp; &nbsp; lists the changed files in your branch compared to main
 
 #### Examples
     bdiff         // just lists the files
@@ -35,9 +35,16 @@
     bdiffs s      // opens files in sublime
     
     
-## fcd 
-
-##### searchs forward into directories for matching fragments and changes working directory to first match
+## fcd \<path_fragement\> \<..more path fragements\>
+### Forward Change Directory
+#####   &nbsp; &nbsp;searches forward into directories for matching fragments and changes working directory to first match
 
 #### Examples
 ![image](https://user-images.githubusercontent.com/90342284/151314414-b40d4643-1f74-446c-8695-8a0fb6b0bc13.png)
+
+## rb
+### Remote Branches
+#####   &nbsp; &nbsp; lists remote branchs by age
+#### Example
+    rb           // has no options
+![image](https://user-images.githubusercontent.com/90342284/151432852-4e419880-524e-43d1-a77a-f8beb59a3e03.png)
