@@ -23,7 +23,7 @@
     
 ## bdiffs <option>
 
-##### lists the changed files in your files (from main)
+##### branch_diffs: lists the changed files in your branch compared to main
 
 #### Examples
     bdiff         // just lists the files
