@@ -17,6 +17,11 @@ if "%~1" equ "s" (
 	set "_open_command=subl"
 )
 
+if "%~1" equ "e" (
+	echo open in Editor
+	set "_open_command=%EDITOR%"
+)
+
 
 call git_root.bat rootdir
 
