@@ -19,3 +19,17 @@
     opath opath      // you don't need to specify ".bat"
   
     opath pull3d
+    
+    
+## bdiffs <e> <v>
+
+##### lists the changed files in your files (from main)
+
+#### Examples
+    bdiff         // just lists the files
+  
+    bdiffs e      // opens in EDITOR
+    
+    bdiffs v      // opens files in Visual Studio
+    
+    bdiffs s      // opens files in sublime
